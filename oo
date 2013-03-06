@@ -1,0 +1,15 @@
+var MyObj = function() {  
+// Private variables  
+  var priv1 = 'private 1',  
+      priv2 = 'private 2';  
+// Only the methods and properties within this object will be available.  
+  return {  
+    doSomething : function() {  
+      // alert(priv1); // private 1  
+      alert(this.someProp); // someValue  
+    },  
+    someProp : 'someValue'  
+  }  
+}(); // execute the function when the MyObj variable is initialized.  
+
+MyObj.doSomething();
